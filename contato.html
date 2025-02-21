@@ -90,44 +90,23 @@
 
                     <!-- Formulário de Contato -->
                     <div class="contato-form">
-                        <form id="contactForm">
+                        <form action="https://formspree.io/f/xrbejlwa" method="POST">
                             <div class="form-group">
-                                <label for="name">Nome Completo</label>
-                                <input type="text" id="name" name="name" required>
+                                <label for="nome">Nome:</label>
+                                <input type="text" name="nome" id="nome" required>
                             </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email">E-mail</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="phone">WhatsApp</label>
-                                    <input type="tel" id="phone" name="phone" required>
-                                </div>
-                            </div>
-
+                            
                             <div class="form-group">
-                                <label for="subject">Assunto</label>
-                                <select id="subject" name="subject" required>
-                                    <option value="">Selecione um assunto</option>
-                                    <option value="suporte">Suporte Técnico</option>
-                                    <option value="orcamento">Orçamento</option>
-                                    <option value="duvida">Dúvidas</option>
-                                    <option value="outro">Outro</option>
-                                </select>
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" id="email" required>
                             </div>
-
+                            
                             <div class="form-group">
-                                <label for="message">Mensagem</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <label for="mensagem">Mensagem:</label>
+                                <textarea name="mensagem" id="mensagem" required></textarea>
                             </div>
-
-                            <button type="submit" class="submit-button">
-                                <i class="far fa-paper-plane"></i>
-                                Enviar Mensagem
-                            </button>
+                            
+                            <button type="submit">Enviar</button>
                         </form>
                     </div>
                 </div>
