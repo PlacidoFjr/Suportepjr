@@ -1,0 +1,32 @@
+.nav-menu {
+    margin-left: auto;
+    padding-right: 50px;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #007bff;
+}
+
+.nav-menu a.active {
+    color: #007bff;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        padding-right: 20px;
+    }
+} 

@@ -1,0 +1,383 @@
+/* Estilos para a página de serviços */
+.servicos-container {
+    padding: 20px;
+    max-width: 100%;
+}
+
+.servicos-hero {
+    text-align: center;
+    padding: 60px 0;
+    background: linear-gradient(135deg, #007bff, #00a6ff);
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
+.servicos-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.servicos-titulo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.servicos-titulo h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.servicos-grid {
+    display: grid;
+    gap: 20px;
+    padding: 0 15px;
+}
+
+.servico-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.servico-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+}
+
+.servico-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.servico-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.servico-card i {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.servico-card h2 {
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.servico-card ul {
+    list-style: none;
+    padding-left: 0;
+    list-style-position: inside;
+    text-align: left;
+    margin-top: auto;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.servico-card ul li {
+    color: #666;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+}
+
+.servico-card ul li:last-child {
+    border-bottom: none;
+}
+
+.beneficios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+.beneficios > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin-top: 2rem;
+}
+
+.beneficios > div > div {
+    flex: 1;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.beneficios > div > div:hover {
+    transform: translateY(-5px);
+}
+
+.beneficio-item {
+    flex: 1;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.beneficio-item:hover {
+    transform: translateY(-5px);
+}
+
+.beneficio-icon {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.beneficio-item h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.beneficio-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Media Queries mais robustas */
+@media screen and (min-width: 1400px) {
+    .servicos-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 1399px) and (min-width: 1024px) {
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .servicos-grid {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 450px;
+    }
+    
+    .servico-card {
+        max-width: 100%;
+    }
+}
+
+/* Garantir que textos e elementos não ultrapassem seus containers */
+.servico-card h2,
+.servico-card p,
+.servico-card ul {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+/* Prevenir que imagens e ícones estourem o layout */
+.servico-card img,
+.servico-card i {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header fixo */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    padding: 15px 20px;
+    min-width: 320px; /* Largura mínima para evitar quebra */
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #007bff;
+}
+
+.nav-menu a.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    .servicos-grid {
+        grid-template-columns: 1fr; /* Uma coluna em mobile */
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .servico-card {
+        padding: 20px 15px;
+    }
+
+    .servicos-titulo h2 {
+        font-size: 1.5rem;
+    }
+
+    .servico-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .servico-card p {
+        font-size: 0.9rem;
+    }
+
+    /* Ajuste para telas muito pequenas */
+    @media screen and (max-width: 360px) {
+        .servicos-grid {
+            padding: 0 10px;
+        }
+
+        .servico-card {
+            padding: 15px;
+        }
+    }
+
+    .beneficios > div {
+        flex-direction: column;
+    }
+    
+    .beneficio-item {
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+    
+    .servicos-titulo {
+        padding: 30px 10px;
+    }
+}
+
+/* Ajuste para o botão de WhatsApp não sobrepor o conteúdo */
+.whatsapp-button {
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.porque-escolher {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.porque-escolher h2 {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.beneficio-item {
+    background: white;
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.beneficio-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.beneficio-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.beneficio-titulo {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.beneficio-descricao {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Media queries específicas */
+@media screen and (max-width: 360px) {
+    .porque-escolher {
+        padding: 30px 15px;
+    }
+
+    .porque-escolher h2 {
+        font-size: 1.4rem;
+    }
+
+    .beneficio-item {
+        padding: 20px 15px;
+    }
+
+    .beneficio-titulo {
+        font-size: 1.1rem;
+    }
+
+    .beneficio-descricao {
+        font-size: 0.85rem;
+    }
+}
+
+/* Ajuste para o botão do WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+} 
