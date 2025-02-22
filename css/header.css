@@ -1,32 +1,90 @@
-.nav-menu {
-    margin-left: auto;
-    padding-right: 50px;
+/* Estilo do header */
+.header {
+    background-color: #000000 !important; /* Força preto sólido */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative; /* Remove qualquer transparência herdada */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
 }
 
-.nav-menu ul {
+/* Logo e título */
+.logo-container {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.ti-text {
+    color: #1a73e8; /* Cor azul para o "TI" */
+}
+
+/* Área restrita mais compacta */
+.area-restrita {
+    background: #1a73e8;
+    padding: 10px 20px; /* Aumentado padding */
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* Aumentado proporcionalmente */
+    transition: background 0.3s;
+    margin-left: 40px; /* Ajustado para manter proporção */
+}
+
+.area-restrita:hover {
+    background: #1557b0;
+}
+
+/* Menu de navegação */
+.nav-menu {
+    display: flex;
+    gap: 32px; /* Espaçamento mais preciso entre itens */
     align-items: center;
 }
 
 .nav-menu a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    font-size: 20px; /* Tamanho ajustado */
+    font-weight: 400;
+    letter-spacing: 0;
+    padding: 0;
+    margin: 0;
+    text-transform: none;
+    font-family: Arial, sans-serif; /* Garantindo mesma fonte */
 }
 
-.nav-menu a:hover {
-    color: #007bff;
-}
-
+.nav-menu a:hover,
 .nav-menu a.active {
-    color: #007bff;
-    position: relative;
+    color: #1a73e8;
+    font-size: 20px; /* Mantendo mesmo tamanho */
+    text-decoration: none;
+    letter-spacing: 0;
 }
 
+/* Responsivo */
 @media (max-width: 768px) {
-    .nav-menu {
-        padding-right: 20px;
+    .header {
+        padding: 10px 15px;
+    }
+
+    .logo-text {
+        font-size: 18px;
+    }
+
+    .nav-menu a {
+        font-size: 20px; /* Ajustado para mobile */
+    }
+
+    .area-restrita {
+        font-size: 16px;
     }
 } 
