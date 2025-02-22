@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJR - Área do Cliente</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <!-- Lado Cliente -->
+            <div class="login-form client-form">
+                <h2>Área do Cliente</h2>
+                <form>
+                    <div class="input-group">
+                        <i class="far fa-envelope"></i>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Senha" required>
+                    </div>
+                    
+                    <div class="forgot-password">
+                        <a href="#">Esqueceu a senha?</a>
+                    </div>
+                    
+                    <button type="submit" class="sign-in-btn">ENTRAR</button>
+                </form>
+            </div>
+
+            <!-- Lado Informativo -->
+            <div class="welcome-side info-side">
+                <h2>Bem-vindo!</h2>
+                <p>Acompanhe seus serviços e solicite atendimento</p>
+                <button class="switch-btn" onclick="switchToAdmin()">VOLTAR</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchToAdmin() {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,685 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f6f8;
+    font-family: 'Arial', sans-serif;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px;
+}
+
+.login-box {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 900px;
+}
+
+.admin-side {   
+    flex: 1;
+    padding: 40px;
+    background: white;
+}
+
+.client-side {
+    background: #007bff;
+    color: white;
+    padding: 40px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.login-form {
+    flex: 1;
+    padding: 40px 80px;
+    background: white;
+}
+
+.login-form h2 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background: #ddd;
+}
+
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+.divider span {
+    background: white;
+    padding: 0 10px;
+    color: #666;
+    font-size: 12px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.input-group input::placeholder {
+    color: #666;
+}
+
+.forgot-password {
+    text-align: right;
+    margin: 15px 0 25px;
+}
+
+.forgot-password a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Estilo sofisticado para o botão */
+.sign-in-btn {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Efeito hover */
+.sign-in-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito de clique */
+.sign-in-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 8px rgba(0, 123, 255, 0.15);
+}
+
+/* Efeito de ripple (onda) */
+.sign-in-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .5s, opacity 1s;
+}
+
+.sign-in-btn:active::after {
+    transform: scale(0, 0);
+    opacity: 0.3;
+    transition: 0s;
+}
+
+/* Container do botão com loading state */
+.button-container {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* Loading spinner */
+.sign-in-btn.loading {
+    background: #0056b3;
+    pointer-events: none;
+}
+
+.sign-in-btn.loading::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.welcome-side {
+    background: #007bff;
+    color: white;
+    padding: 40px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.welcome-side h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.welcome-side p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.sign-up-btn {
+    padding: 12px 30px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.sign-up-btn:hover {
+    background: white;
+    color: #007bff;
+}
+
+.switch-btn {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.switch-btn:hover {
+    background: white;
+    color: #007bff;
+}
+
+/* Animações de Entrada */
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.6s ease forwards;
+}
+
+.slide-in-up {
+    animation: slideInUp 0.6s ease forwards;
+}
+
+/* Animação de Pulso para Botões */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Animação de Saída */
+.slide-out {
+    animation: slideOut 0.5s ease forwards;
+}
+
+/* Definição das Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes slideOut {
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+/* Efeito de Hover nos Inputs */
+.input-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Efeito de Hover nos Botões */
+.sign-in-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.switch-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Transições Suaves */
+.input-group input,
+.sign-in-btn,
+.switch-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Delay nas Animações */
+.input-group:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.forgot-password {
+    animation-delay: 0.2s;
+}
+
+.sign-in-btn {
+    animation-delay: 0.3s;
+}
+
+/* Responsividade com Animações */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    .login-box {
+        flex-direction: column;
+    }
+
+    .login-form {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .welcome-side {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+    }
+
+    .sign-in-btn {
+        font-size: 14px;
+    }
+}
+
+/* Estilo do Botão Voltar */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.back-button a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.back-button a:hover {
+    background-color: #fff;
+    transform: translateX(-3px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    color: #007bff;
+}
+
+.back-button i {
+    font-size: 16px;
+}
+
+/* Responsividade para o botão voltar */
+@media (max-width: 768px) {
+    .back-button {
+        top: 10px;
+        left: 10px;
+    }
+
+    .back-button a {
+        padding: 8px 12px;
+    }
+
+    .back-button span {
+        display: none; /* Esconde o texto em telas pequenas */
+    }
+}
+
+/* Estilo do Botão Home */
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.home-button a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background-color: white;
+    border-radius: 8px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.home-button a:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    color: #007bff;
+}
+
+.home-button i {
+    font-size: 18px;
+}
+
+/* Efeito de hover suave */
+.home-button a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.home-button a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Responsividade do botão */
+@media (max-width: 768px) {
+    .home-button {
+        top: 10px;
+        left: 10px;
+    }
+
+    .home-button a {
+        padding: 10px 15px;
+    }
+
+    .home-button span {
+        display: none; /* Esconde o texto em telas pequenas */
+    }
+
+    .home-button i {
+        font-size: 20px; /* Aumenta um pouco o ícone em telas pequenas */
+    }
+}
+
+.back-to-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-to-home a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.back-to-home a:hover {
+    background-color: #f8f9fa;
+    transform: translateX(-3px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    color: #007bff;
+}
+
+.back-to-home i {
+    font-size: 16px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .back-to-home {
+        top: 10px;
+        left: 10px;
+    }
+
+    .back-to-home a {
+        padding: 8px 12px;
+    }
+}
+
+.outlined-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.outlined-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .outlined-button {
+        width: 80%;
+        max-width: 280px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form, .welcome-side {
+        padding: 20px;
+    }
+
+    .welcome-side h2 {
+        font-size: 20px;
+    }
+
+    .welcome-side p {
+        font-size: 14px;
+    }
+
+    .outlined-button {
+        width: 90%;
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+}
+
+/* Ajustes para orientação paisagem em dispositivos móveis */
+@media (max-height: 480px) and (orientation: landscape) {
+    .outlined-button {
+        margin: 10px auto;
+        padding: 8px 16px;
+    }
+}
+
+/* Ajustes para altura */
+@media (max-height: 600px) {
+    .login-form {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+} 

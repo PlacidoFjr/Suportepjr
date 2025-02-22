@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJR - Área do Cliente</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Botão Voltar para Home -->
+    <div class="back-to-home">
+        <a href="index.html">
+            <i class="fas fa-arrow-left"></i>
+            Voltar para Home
+        </a>
+    </div>
+
+    <div class="login-container">
+        <div class="login-box">
+            <!-- Lado Cliente -->
+            <div class="login-form client-side">
+                <h2>Área do Cliente</h2>
+                <form class="fade-in-up">
+                    <div class="input-group slide-in-left">
+                        <i class="far fa-envelope"></i>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    
+                    <div class="input-group slide-in-right">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Senha" required>
+                    </div>
+                    
+                    <div class="forgot-password fade-in">
+                        <a href="#">Esqueceu a senha?</a>
+                    </div>
+                    
+                    <div class="button-container">
+                        <button type="submit" class="sign-in-btn" id="loginBtn">
+                            ENTRAR
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Lado Admin -->
+            <div class="welcome-side admin-side">
+                <div class="content-wrapper fade-in">
+                    <h2>Área Administrativa</h2>
+                    <p>Acesso restrito para administradores</p>
+                    <button class="switch-btn pulse" onclick="switchToAdmin()">ACESSAR COMO ADMIN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchToAdmin() {
+            document.querySelector('.login-box').classList.add('slide-out');
+            setTimeout(() => {
+                window.location.href = 'admin-login.html';
+            }, 500);
+        }
+    </script>
+</body>
+</html> 

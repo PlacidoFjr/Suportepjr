@@ -43,6 +43,12 @@
                     </ul>
                 </nav>
             </div>
+
+            <div class="restricted-area-button">
+                <a href="login.html">
+                    <i class="fas fa-user"></i> Área Restrita
+                </a>
+            </div>
         </div>
     </header>
 
@@ -191,12 +197,6 @@
             </div>
         </section>
 
-        <!-- Botões Flutuantes -->
-        <a href="https://wa.me/5571999195766" class="floating-whatsapp" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-            <span>Precisa de ajuda?</span>
-        </a>
-
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -249,15 +249,34 @@
                 </div>
             </div>
         </div>
-
-        <!-- Botão de Ajuda -->
-        <a href="#ajuda" class="help-button">
-            <i class="fas fa-headset"></i>
-            Precisa de ajuda?
-        </a>
     </footer>
 
+    <div class="chatbot-container">
+        <button class="help-button" onclick="toggleChat()">
+            Precisa de ajuda?
+        </button>
+        
+        <div class="chatbot-box" id="chatbox">
+            <div class="chatbot-header">
+                <h3>Suporte PJR</h3>
+                <button onclick="toggleChat()">×</button>
+            </div>
+            
+            <div class="chat-messages" id="chat-messages">
+                <!-- Mensagens aparecerão aqui -->
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+                <button onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script src="js/main.js" defer></script>
+    <script src="js/chatbot.js"></script>
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             const nav = document.querySelector('.menu');
