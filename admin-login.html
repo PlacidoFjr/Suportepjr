@@ -3,51 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PJR - Login</title>
+    <title>PJR - Login Administrativo</title>
     <link rel="stylesheet" href="css/admin-login.css">
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="login-container">
         <div class="login-box">
             <!-- Lado Admin -->
             <div class="login-form">
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="Logo PJR" class="logo">
+                </div>
+                
                 <div class="form-header">
-                    <img src="images/logo.png" alt="PJR Logo" class="logo">
-                    <h1>Área Administrativa</h1>
+                    <h2>Área Administrativa</h2>
                     <p>Faça login para acessar o painel</p>
                 </div>
 
                 <form>
                     <div class="input-group">
-                        <input type="email" id="email" required>
-                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Email" required>
                     </div>
                     
                     <div class="input-group">
-                        <input type="password" id="password" required>
-                        <label for="password">Senha</label>
+                        <input type="password" id="senha" placeholder="Senha" required>
                     </div>
                     
-                    <div class="form-footer">
-                        <div class="remember-me">
-                            <input type="checkbox" id="remember">
-                            <label for="remember">Lembrar-me</label>
-                        </div>
+                    <div class="form-options">
+                        <label class="remember">
+                            <input type="checkbox" id="lembrar">
+                            <span>Lembrar-me</span>
+                        </label>
                         <a href="#" class="forgot-link">Esqueceu a senha?</a>
                     </div>
                     
-                    <button type="submit" class="login-btn">Entrar</button>
+                    <button type="submit" class="btn-login">Entrar</button>
                 </form>
             </div>
 
             <!-- Lado Cliente -->
             <div class="welcome-side">
-                <div class="welcome-content">
-                    <h2>Área do Cliente</h2>
-                    <p>Acesso restrito para clientes</p>
-                    <a href="login.html" class="client-btn">Acessar área do cliente</a>
-                </div>
+                <h2>Área do Cliente</h2>
+                <p>Acesso restrito para clientes</p>
+                <a href="login.html" class="btn-client">Acessar área do cliente</a>
             </div>
         </div>
     </div>
